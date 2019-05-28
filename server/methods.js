@@ -7,7 +7,11 @@ Meteor.methods({
     },
 
     updatePlayer(player) {
-        console.log("Just before updating player" + player);
         Players.update(player._id, { $set: player });
+    },
+
+    deletePlayer(playerId) {
+        console.log("just before deletePlayer");
+        Players.remove(playerId);
     }
 });
