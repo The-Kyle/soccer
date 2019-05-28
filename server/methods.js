@@ -1,2 +1,8 @@
 import { Meteor } from 'meteor/meteor';
-import { Player } from '../imports/api/players';
+import { Players } from '../imports/api/players';
+
+Meteor.methods({
+    insertPlayer(player) {
+        Players.insert(player);
+    }
+});
