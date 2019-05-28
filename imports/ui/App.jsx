@@ -15,20 +15,40 @@ import TeamStats from './Team-stats';
 import Player from './Player';
 import AccountsWrapper from './AccountsWrapper';
 
+const tempPlayer = {
+    name: "Temp Player",
+    team: "NSCC",
+    ballManipulation: 2,
+    kickingAbilities: 2,
+    passingAbilities: 3,
+    duelTackling: 3,
+    fieldCoverage: 0,
+    blockingAbilities: 1,
+    gameStrategy: 2,
+    playmakingRisks: 2,
+    notes: "This Player is Temporary Use Only",
+};
+
 export class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            players: []
+            currentPlayer: tempPlayer,
+            showEditPlayer: false,
         };
+        this.updateCurrentPlayer = this.updateCurrentPlayer.bind(this); //ES6 issue
     }
-
-
 
     renderPlayers() {
         return this.props.players.map((player) => (
-            <TeamList key={player._id} player={player} />
+            <TeamList key={player._id} player={player} updateCurrentPlayer={this.updateCurrentPlayer} />
         ));
+    }
+
+    updateCurrentPlayer(player) {
+        this.setState({
+            currentPlayer: player,
+        });
     }
 
     render() {
@@ -42,7 +62,7 @@ export class App extends Component {
                         <AccountsWrapper />
                     </AppBar>
                     <div className="row">
-                        <div className="col s12 m7"><Player /></div>
+                        <div className="col s12 m7"><Player player={this.state.currentPlayer} /></div>
                         <div className="col s12 m5">
                             <h2>Team List</h2><Link to="/new" className="waves-effect waves-light btn">Add player</Link>
                             <Divider />
