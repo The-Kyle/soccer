@@ -19,4 +19,4 @@ Meteor.startup(() => {
             </Switch>
         </Router>
     ), document.getElementById('render-target'));
-})
+});
