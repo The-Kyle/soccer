@@ -1,0 +1,16 @@
+{
+    "meteor-azure": {
+      "siteName": "soccer-app",
+      "resourceGroup": "larry",
+      "subscriptionId": "c8f66e41-c827-43ea-a168-cfb6b579ad63",
+      "tenantId": "c59bd97a-4b1b-4dab-89ac-a0ab6a8e4435",
+      "deploymentCreds": {
+        "username": "$soccer-app",
+        "password": "yWbi4fdDme5l6e2HvQNw4KvfNKYpBal6QgyLchrvd8MHlP7zx7riWyPiDkwJ"
+      },
+      "envVariables": {
+        "ROOT_URL": "https://soccer-app.azurewebsites.net",
+        "MONGO_URL": "mongodb://larry:acbQL9gBOtX83DGdctvcpOjWMLkdnE8HwVJCrNxSsjaOIAm1z8ATw1aZcLJWy6wiFWQAUR3EBJjnmrPK68z0CA==@larry.documents.azure.com:10255/?ssl=true"
+      }
+    }
+}
