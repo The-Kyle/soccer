@@ -2,7 +2,8 @@
   "name": "soccer-app",
   "private": true,
   "scripts": {
-    "start": "$HOME/.meteor/meteor run",
+    "heroku-prebuild": "cd bundle/programs/server && npm install -q",
+    "start": "cd bundle && node main.js",
     "debug": "meteor run --inspect-brk=9229",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
