@@ -1,6 +1,6 @@
 {
   "name": "soccer-app",
-  "private": true,
+  "private": true, 
   "scripts": {
     "heroku-prebuild": "cd bundle/programs/server && npm install -q",
     "start": "cd bundle && node main.js",
