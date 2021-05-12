@@ -28,7 +28,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-tap-event-plugin": "^3.0.3",
-    "simpl-schema": "^1.5.5"
+    "simpl-schema": "^1.10.2"
   },
   "meteor": {
     "mainModule": {
